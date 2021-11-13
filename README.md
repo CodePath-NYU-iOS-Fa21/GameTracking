@@ -70,4 +70,4 @@ Optional:
 * Settings -> Toggle settings
 
 ## Wireframes
-<img src="gamelog.png" width=800><br>
+<img src="https://github.com/CodePath-NYU-iOS-Fa21/GameTracking/blob/main/gamelog.jpg?raw=true" width=800><br>
