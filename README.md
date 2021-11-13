@@ -70,4 +70,4 @@ Optional:
 * Settings -> Toggle settings
 
 ## Wireframes
-<img src="" width=800><br>
+<img src="gamelog.png" width=800><br>
