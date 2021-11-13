@@ -1,5 +1,3 @@
-# GameTracking
-
 Unit 8 - Group Milestone
 
 # GAMELOG
