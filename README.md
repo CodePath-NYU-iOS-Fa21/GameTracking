@@ -17,7 +17,7 @@ Tracks the gaming activity of an individual across multiple platforms and also p
 - **Story:** Analyzes users gaming activity and provides information to users about game difficulty, progress, etc. The user can also view other gamers' activity, follow them, comment on their activity and connect with them.
 - **Market:** Any individual could choose to use this app, and to keep it a safe environment, people would be organized into age groups.
 - **Habit:** This app could be used as often as the user wanted depending on how much they game and what exactly they're specifically using the app for.
-- **Scope:** First we would start with pairing people based on music taste, then perhaps this could evolve into a music sharing application as well to broaden its usage. Large potential for use with spotify, apple music, or other music streaming applications.
+- **Scope:** We would initially build a database of user gaming history and also allows users to learn more about games they're interested in. Then, once we get enough users, the social aspects of this app would become more prominent - users could follow other users, comment on their posts and make friends with them.  
 
 ## Product Spec
 ### 1. User Stories (Required and Optional)
