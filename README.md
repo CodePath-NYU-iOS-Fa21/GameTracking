@@ -71,3 +71,93 @@ Optional:
 
 ## Wireframes
 <img src="https://github.com/CodePath-NYU-iOS-Fa21/GameTracking/blob/main/gamelog.jpg?raw=true" width=800><br>
+
+
+# Game Log Schema
+    
+
+## Schema 
+### Models
+
+#### User
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | uuid for the user (default field) |
+   | email         | String   | login email for the user |
+   | password      | String   | hashed password for the user |
+   | userId        | String   | unique user handle for the user |
+   | userName      | String   | display name for the user |
+   | profileImage  | File     | profile image for the user |
+   | bannerImage*  | File     | banner image for the user |
+   | platformInfo  | List     | list of platform info for the user |
+   | createdAt     | DateTime | date when user is created (default field) |
+   | updatedAt     | DateTime | date when user is last updated (default field) |
+   |gameIDs | Array [String] | collection of games that the user has played | 
+
+#### Post
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user post (default field) |
+   | author        | Pointer to User| post author |
+   | game          | Pointer to Game| The game this post is about |
+   | image         | File     | image that user posts |
+   | caption       | String   | image caption by author |
+   |comments       | Array [String] | array containing comments for post 
+   | commentsCount | Number   | number of comments that has been posted to an image |
+   | likesCount    | Number   | number of likes for the post |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
+
+#### Game
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the game |
+   | studio        | String   | Studio name for the game |
+   | platforms     | Array [String] | platforms that the game is available on |
+   | genre         | String   | genre catalog for the game |
+   | age rating | String | age rating for game |
+   | image     | File     | poster image for the game |
+   | description       | String   | short description of game |
+   | releaseDate     | DateTime | date when game was released |
+   
+
+
+### Networking
+#### List of network requests by screen
+   - Home Feed Screen
+      - (Read/GET) Query all posts where user is author or any of the user's following are authors
+      - (Create/POST) Create a new like on a post
+      - (Delete) Delete existing like
+
+   - Post Detail Screen
+      - (Create/POST) Create a new comment on a post
+      - (Delete) Delete existing comment
+      - (Create/POST) Create a new like on a post
+      - (Delete) Delete existing like 
+   - Create Post Screen
+      - (Create/POST) Create a new post object
+      - (Update/PUT) User's game library/history
+   - Settings Screen
+      - (Read/GET) Query logged in user object
+      - (Update/PUT) Update user profile image or other settings
+   - User Profile Screen
+      - (Read/GET) Query a user object (including logged in usert)
+      - (Update/PUT) Follow/unfollow a user
+   - Search screen
+       - (Read/GET) Query a game object
+       - (Read/GET) Query a user object
+   - Game Detail screen
+       - (Read/GET) Query info about a game 
+#### [OPTIONAL:] Existing API Endpoints
+##### Video Game Database API
+
+- IGDB - [https://api-docs.igdb.com/#endpoints]
+
+- Games - [https://api.igdb.com/v4/games]
+
+##### Video Game Info API
+
+- Howlongtobeat: https://pypi.org/project/howlongtobeatpy/
